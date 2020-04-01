@@ -27,15 +27,17 @@
   }
   
   .image {
-    height: 400px;
+    height: auto;
     opacity: .7;
+    position: relative;
+    margin-bottom: 0;
     overflow: hidden;
     transition: all .2s ease-in-out;
   }
   
   .image:hover,
   .cardo:hover .image {
-    height: 400px;
+    height: auto;
     opacity: 1;
   }
   

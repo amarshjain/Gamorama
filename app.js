@@ -11,7 +11,7 @@ var compression = require('compression');
 app.use(compression());
 
 
-    mongoose.connect("mongodb://localhost/GAMORAMA", { useUnifiedTopology: true,useNewUrlParser: true }); //create GAMORAMA db inside mongodb
+mongoose.connect("mongodb+srv://mmaj6625:mmaj6625@cluster0-h9ef6.mongodb.net/test?retryWrites=true&w=majority", { useUnifiedTopology: true,useNewUrlParser: true }); //create GAMORAMA db inside mongodb
 
 
 app.use(expSan());
@@ -262,4 +262,8 @@ const port = 3000;
 
 app.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
+});
+
+app.listen(process.env.PORT, process.env.IP, function(){
+    console.log("SERVER IS RUNNING..");
 });
